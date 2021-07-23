@@ -19,7 +19,7 @@ Used Technologies:
 - TensorFlow: Model Architecture from [SimpleHTR](https://github.com/githubharald/SimpleHTR). 
 - Flask: Creating an API to receive image from mobile app and return recognized text and a list of most similar Drug names.  
 - Google Colab: For training the model and as a development server during the test.
-- MySQL: Creating a Database to store all users information.      
+- MySQL: Creating a Database to store all users information.(See Database Description File)      
 
 Explanation:
 
@@ -29,5 +29,19 @@ using saved model to predict new handwritten words (drug names).
 Since the training was operating using Normal English words, so it was predicted that there would be some error ratio in the recognized Drug names to reduce error 
 we used the recognized text from the model and search for the most similar Drug names using an existing API for Drugs [getSpellingSuggestions](https://rxnav.nlm.nih.gov/api-RxNorm.getSpellingSuggestions.html).
 
+Result:
 
+We test the model using 20 images like 
+![test image number2](https://github.com/muhammadNassef/Graduation-Project/blob/main/t2.jpg)
+Recognized text: "systonre"
+
+Suggestion list: "Systane"
+
+Model Accuracy: 60.41%
+
+The model accuracy is not good enough to be used in a final product.
+in future work, the main goal is to improve the model accuracy by using these techniques or other suitable methods:
+- Using dataset for drug names instead of regular English words.
+- Improving Model Architecture by adding more Layers. 
+- Using other preprocessing techniques to process images for training. 
 
